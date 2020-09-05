@@ -100,9 +100,7 @@ MAKEFILE_USER = Makefile.user
 # Compilation variables
 # ------------------------------------------------------------------------------
 
-CDFLAGS += -ggdb3 -Wall -Wextra -DDEBUG -Wno-format -Wno-write-strings \
-		   -Wno-unused-function -Wno-unused-parameter -Wno-system-headers \
-		   -Wno-format-security -Wno-ignored-qualifiers
+CDFLAGS += -ggdb3 -DDEBUG
 
 CXXDFLAGS += $(CDFLAGS)
 
