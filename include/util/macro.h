@@ -16,7 +16,7 @@
  *
  * @returns The length number literal.
  */
-#define ARRAY_LENGTH(array) (sizeof (array) / sizeof (array[0]))
+#define ARRAY_LENGTH(array) (sizeof (array) / sizeof (array)[0])
 
 /**
  * Get a stack-allocated mutable string from the given string literal.
