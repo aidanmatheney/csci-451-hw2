@@ -40,22 +40,22 @@ pid_t safeFork(char const * const callerDescription) {
  *
  * @param filePath The path to the program file to execute. If this does not include a slash character, PATH will be
  *                 searched.
- * @param arguments A null-terminated array of null-terminated strings that represents the argument list available to
-                    the new program. The first argument, by convention, should point to the filename associated with the
-                    file being executed. This will be the `argv` value of the new process.
+ * @param argv A null-terminated array of null-terminated strings that represents the argument list available to the new
+ *             program. The first argument, by convention, should point to the filename associated with the file being
+ *             executed.
  * @param callerDescription A description of the caller to be included in the error message. This could be the name of
  *                          the calling function, plus extra information if useful.
  */
 void safeExecvp(
     char const * const filePath,
-    char * const * const arguments,
+    char * const * const argv,
     char const * const callerDescription
 ) {
     guardNotNull(filePath, "filePath", "safeExecvp");
-    guardNotNull(arguments, "arguments", "safeExecvp");
+    guardNotNull(argv, "argv", "safeExecvp");
     guardNotNull(callerDescription, "callerDescription", "safeExecvp");
 
-    int const execResult = execvp(filePath, arguments);
+    int const execResult = execvp(filePath, argv);
     if (execResult == -1) {
         int const execErrorCode = errno;
         char const * const execErrorMessage = strerror(execErrorCode);

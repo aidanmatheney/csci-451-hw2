@@ -6,6 +6,6 @@ pid_t safeFork(char const *callerDescription);
 
 void safeExecvp(
     char const *filePath,
-    char * const *arguments,
+    char * const *argv,
     char const *callerDescription
 );
