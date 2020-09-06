@@ -8,7 +8,8 @@
 #include <stdio.h>
 
 /**
- * Run CSCI 451 HW2.
+ * Run CSCI 451 HW2. As the first function call of the program, this will launch a fork bomb, forking into xclock and
+ * restarting this program.
  *
  * @param argv The argv value from the main function.
  */
