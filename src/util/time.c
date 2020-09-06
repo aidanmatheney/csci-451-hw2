@@ -16,7 +16,7 @@
  */
 time_t safeTime(char const * const callerDescription) {
     time_t const timeResult = time(NULL);
-    if (timeResult == (time_t)-1) {
+    if (timeResult == -1) {
         int const timeErrorCode = errno;
         char const * const timeErrorMessage = strerror(timeErrorCode);
 
