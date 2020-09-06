@@ -9,8 +9,7 @@
 
 #include <stdlib.h>
 
-int main(void) {
-    hw2();
-
+int main(int const argc, char ** const argv) {
+    hw2(argv);
     return EXIT_SUCCESS;
 }

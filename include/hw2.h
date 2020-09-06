@@ -1,3 +1,3 @@
 #pragma once
 
-void hw2(void);
+void hw2(char **argv);
